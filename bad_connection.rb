@@ -1,4 +1,3 @@
-
 goodbyes = 0
 puts "What would you like to say? > "
 phrase = gets.chomp
