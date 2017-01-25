@@ -1,8 +1,8 @@
-ask_input = "What would you like to say? > "
-reply_not_upcase = "I AM HAVING A HARD TIME HEARING YOU."
-reply_all_upcase = "NO, THIS IS NOT A PET STORE"
-reply_goodbye = "ANYTHING ELSE I CAN HELP WITH?"
-exit_phrase = "GOODBYE!"
+ask_input = 'What would you like to say? > '
+reply_not_upcase = 'I AM HAVING A HARD TIME HEARING YOU.'
+reply_all_upcase = 'NO, THIS IS NOT A PET STORE'
+reply_goodbye = 'ANYTHING ELSE I CAN HELP WITH?'
+exit_phrase = 'GOODBYE!'
 exit_phrase_count = 0
 
 while exit_phrase_count < 2
