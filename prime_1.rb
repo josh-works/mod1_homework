@@ -23,7 +23,7 @@ end
 puts prime?(5)
 puts prime?(10)
 
-while input != ''
+if input != ''
   puts "what else do you want to test? > "
   input = gets.chomp.to_i
   prime?(input)
