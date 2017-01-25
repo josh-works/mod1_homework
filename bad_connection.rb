@@ -17,9 +17,9 @@ until goodbyes == 1
     puts ask_input
     input = gets.chomp
   elsif input == "GOODBYE!"
+    goodbyes += 1
     puts reply_goodbye
     puts ask_input
-    goodbyes += 1
     input = gets.chomp
   end
 end
