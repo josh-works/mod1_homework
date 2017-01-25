@@ -4,22 +4,16 @@ reply_all_upcase = "NO, THIS IS NOT A PET STORE"
 reply_goodbye = "ANYTHING ELSE I CAN HELP WITH?"
 
 goodbyes = 0
-puts ask_input
-input = gets.chomp
 
-until goodbyes == 1
+until goodbyes == 2
+  puts ask_input
+  input = gets.chomp
   if input != input.upcase
     puts reply_not_upcase
-    puts ask_input
-    input = gets.chomp
   elsif input == input.upcase && input != "GOODBYE!"
     puts reply_all_upcase
-    puts ask_input
-    input = gets.chomp
   elsif input == "GOODBYE!"
     goodbyes += 1
     puts reply_goodbye
-    puts ask_input
-    input = gets.chomp
   end
 end
