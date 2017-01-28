@@ -1,3 +1,8 @@
+# I really, *really* wanted to play with calling methods, with return values
+# from one method going in as the arguments of the next one. So, this is that approach.
+# It's ugly as sin, and I'll refactor to more concise code later. (This was my "didn't
+# get outside help" approach.)
+
 class CreditCheck
   def initialize(account_id)
     @account_id = account_id.to_s.slice(0..-2).to_i
