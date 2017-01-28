@@ -1,3 +1,5 @@
+require 'Pry'
+
 class SuperFizz
   def self.evaluate(number)
     if number % 3 == 0 && number % 5 == 0 && number % 7 == 0
@@ -24,6 +26,5 @@ class SuperFizz
   end
 
 end
-# To evaluate: 
-# SuperFizz.evaluate(30)
-# SuperFizz.repeat(50)
+
+SuperFizz.repeat(100)
