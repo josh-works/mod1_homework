@@ -4,17 +4,20 @@
 # get outside help" approach.)
 
 class CreditCheck
+  attr_accessor :results
   def initialize(account_id)
     @account_id = account_id.to_s.slice(0..-2).to_i
     @checksum_digit = account_id.to_s[-1].to_i
     @evaluated_checksum_digit = nil
     @valid = nil
+    @results = []
     format_account_number
   end
 
   def format_account_number(account_number = @account_id)
     formatted = account_number.to_s.split('')
     integers = formatted.map { |number| number.to_i }
+    @results << integers
     double_every_other(integers)
   end
 
@@ -22,6 +25,7 @@ class CreditCheck
     doubled = array.map.with_index do |number, index|
       index.even? ? number : number * 2
     end
+    @results << doubled
     sum_digits_over_10(doubled)
   end
 
@@ -34,6 +38,7 @@ class CreditCheck
         number
       end
     end
+    @results << summed
     make_checksum_digit(summed)
   end
 
