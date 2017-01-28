@@ -1,6 +1,7 @@
-require 'Pry'
-
 class SuperFizz
+  def initialize
+    repeat
+  end
   def self.evaluate(number)
     if number % 3 == 0 && number % 5 == 0 && number % 7 == 0
       "SuperFizzBuzz"
@@ -19,12 +20,12 @@ class SuperFizz
     end
   end
 
-  def self.repeat(times)
-    (1..times).each do |number|
+  def repeat
+    1000.times do |number|
       puts SuperFizz.evaluate(number)
     end
   end
 
 end
 
-SuperFizz.repeat(100)
+SuperFizz.new
