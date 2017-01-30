@@ -15,3 +15,6 @@ end
 e = BubbleSort.new
 collection = [10, 15, 6, 9, 14, 4, 2, 7, 0, 1, 13, 5, 8, 3, 11, 12]
 e.sort(collection)
+
+sorter = BubbleSort.new
+sorter.sort(["d", "b", "a", "c"])
