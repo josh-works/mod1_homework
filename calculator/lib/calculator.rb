@@ -1,3 +1,5 @@
+require_relative 'rpm'
+
 class Calculator
   attr_accessor :total
   def initialize

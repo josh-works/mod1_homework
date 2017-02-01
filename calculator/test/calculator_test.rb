@@ -1,6 +1,7 @@
 gem 'minitest'
 require 'minitest/autorun'
 require_relative '../lib/calculator'
+require_relative '../lib/rpm'
 
 class CalculatorTest < Minitest::Test
   def test_create_new_calculator
@@ -45,4 +46,10 @@ class CalculatorTest < Minitest::Test
     calculator.clear
     assert_equal 0, calculator.total
   end
+
+  def test_reverse_polish_notation_basic
+    assert_equal 3, RPN.new.calc("1 2 +")
+  end
+
+
 end
